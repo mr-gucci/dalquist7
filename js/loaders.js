@@ -66,7 +66,7 @@ function createTiles(level, backgrounds) {
 
 export function loadSpriteSheet(name) 
 {
-    return loadJSON(`sprites/${name}.json`)
+    return loadJSON(`./sprites/${name}.json`)
     .then(sheetSpec => Promise.all([
         sheetSpec,
         loadImage(sheetSpec.imageURL),
@@ -112,7 +112,7 @@ export function loadSpriteSheet(name)
 
 export function loadLevel(name) 
 {
-    return loadJSON(`levels/${name}.json`)
+    return loadJSON(`./levels/${name}.json`)
     .then(levelSpec => Promise.all([
         levelSpec,
         loadSpriteSheet(levelSpec.spriteSheet),
